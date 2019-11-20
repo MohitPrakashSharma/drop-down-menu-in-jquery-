@@ -1,0 +1,80 @@
+<style>
+div {
+font-family: consolas;
+}
+.submenu {
+display: none;
+}
+.mainmenu {
+float: left;
+margin: 1px;
+line-height: 30px;
+background-color: #0769AD;
+}
+.mainmenu a{
+margin: 10px;
+color: #FFFFFF;
+text-decoration: none;
+}
+.submenu ul{
+list-style: none;
+margin: 0;
+padding: 0px;
+}
+.submenu li {
+background-color: #EEEEEE;
+margin:1px;
+line-height: 30px;	
+}
+.submenu li a{
+color: #000000;	
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script>
+var showDropDown = function(doc){
+var id = doc.id;
+$("#"+id+" .submenu").show();
+}
+var hideDropDown = function(doc){
+var id = doc.id;
+$("#"+id+" .submenu").hide();
+}
+</script>
+<div id="menu">
+<div class="mainmenu" id="popular" onMouseOver="showDropDown(this)" onMouseOut="hideDropDown(this)">
+<a href="#" title="Popular Toys">Popular Toys</a>
+<div class="submenu">
+<ul>
+<li><a href="#" title="Video Games">Video Games</a></li>
+<li><a href="#" title="Barbies">Barbies</a></li>
+<li><a href="#" title="Teddy Bear">Teddy Bear</a></li>
+<li><a href="#" title="Golf Set">Golf Set</a></li>
+</ul>
+</div>
+</div>
+<div class="mainmenu" id="recent" onMouseOver="showDropDown(this)" onMouseOut="hideDropDown(this)">
+<a href="#" title="Recent Toys">Recent Toys</a>
+<div class="submenu">
+<ul>
+<li><a href="#" title="Yoyo">Yoyo</a></li>
+<li><a href="#" title="Doctor Kit">Doctor Kit</a></li>
+<li><a href="#" title="Puzzles">Puzzles</a></li>
+<li><a href="#" title="Uno Cards">Uno Cards</a></li>
+</ul>
+</div>
+</div>
+<div class="mainmenu" id="category" onMouseOver="showDropDown(this)" onMouseOut="hideDropDown(this)">
+<a href="#" title="Toys Category">Toys Category</a>
+<div class="submenu">
+<ul>
+<li><a href="#" title="Battery Toys">Battery Toys</a></li>
+<li><a href="#" title="Remote Toys">Remote Toys</a></li>
+<li><a href="#" title="Magnet Toys">Magnet Toys</a></li>
+<li><a href="#" title="Soft Toys">Soft Toys</a></li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>
